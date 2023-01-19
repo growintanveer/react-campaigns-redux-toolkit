@@ -19,7 +19,6 @@ const campaignSlice = createSlice({
       state.filteredCampaignsList = action.payload.campaigns;
     },
     filterCampaigns(state, action) {
-      console.log(action);
       const filteredCampaigns = getFilteredCampaigns(
         state.campaignList,
         action.payload

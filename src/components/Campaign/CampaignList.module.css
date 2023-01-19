@@ -8,3 +8,15 @@
 .mt20 {
   margin-top: 2rem;
 }
+
+.bg-success {
+  background-color: rgba(25, 135, 84, 1) !important;
+}
+
+.bg-danger {
+  background-color: rgba(220, 53, 69, 1) !important;
+}
+
+.bg-info {
+  background-color: rgba(13, 202, 240, 1) !important;
+}

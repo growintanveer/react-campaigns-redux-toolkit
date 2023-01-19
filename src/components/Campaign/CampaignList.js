@@ -63,14 +63,20 @@ const CampaignList = () => {
                       {Date.now() >= Date.parse(campaign.startDate) &&
                       Date.now() <= Date.parse(campaign.endDate) ? (
                         <strong>
-                          <Badge bg="success">Active</Badge>
+                          <Badge bg="success" className={classes["bg-success"]}>
+                            Active
+                          </Badge>
                         </strong>
                       ) : (
                         <strong>
                           {Date.now() < Date.parse(campaign.startDate) ? (
-                            <Badge bg="warning">Not Started</Badge>
+                            <Badge bg="info" className={classes["bg-info"]}>
+                              Not Started
+                            </Badge>
                           ) : (
-                            <Badge bg="danger">Inactive</Badge>
+                            <Badge bg="danger" className={classes["bg-danger"]}>
+                              Inactive
+                            </Badge>
                           )}
                         </strong>
                       )}

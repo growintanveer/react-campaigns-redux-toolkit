@@ -12,12 +12,6 @@ const CampaignFilter = () => {
 
   const dispatch = useDispatch();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    console.log("FORM=", form);
-  };
-
   const startDateHandler = (event) => {
     setStartDate(event.target.value);
     dispatch(
@@ -55,40 +49,39 @@ const CampaignFilter = () => {
     <Fragment>
       <Row className={`${classes.customRow} ${classes.mt20}`}>
         <Col md={12}>
-          <Form onSubmit={handleSubmit}>
-            <Row>
-              <Col md={3}>
-                <Form.Group>
-                  <Form.Control
-                    required
-                    type="date"
-                    placeholder="Start Date"
-                    onChange={startDateHandler}
-                  />
-                </Form.Group>
-              </Col>
-              <Col md={3}>
-                <Form.Group>
-                  <Form.Control
-                    required
-                    type="date"
-                    placeholder="End Date"
-                    onChange={endDateHandler}
-                  />
-                </Form.Group>
-              </Col>
-              <Col md={6}>
-                <Form.Group>
-                  <Form.Control
-                    required
-                    type="text"
-                    placeholder="Search by name"
-                    onChange={keywordChangeHandler}
-                  />
-                </Form.Group>
-              </Col>
-            </Row>
-          </Form>
+          <Row>
+            <Col md={3}>
+              <Form.Group>
+                <Form.Control
+                  required
+                  type="date"
+                  placeholder="Start Date"
+                  onChange={startDateHandler}
+                />
+              </Form.Group>
+            </Col>
+            <Col md={3}>
+              <Form.Group>
+                <Form.Control
+                  required
+                  min={startDate}
+                  type="date"
+                  placeholder="End Date"
+                  onChange={endDateHandler}
+                />
+              </Form.Group>
+            </Col>
+            <Col md={6}>
+              <Form.Group>
+                <Form.Control
+                  required
+                  type="text"
+                  placeholder="Search by name"
+                  onChange={keywordChangeHandler}
+                />
+              </Form.Group>
+            </Col>
+          </Row>
         </Col>
       </Row>
     </Fragment>
