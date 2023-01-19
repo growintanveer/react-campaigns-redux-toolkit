@@ -27,7 +27,7 @@ const CampaignList = () => {
   return (
     <Fragment>
       <Row className={`${classes.customRow} ${classes.mt20}`}>
-        <Col md={12}>
+        <Col md={12} data-testid="api-data-content">
           {loading && (
             <Spinner animation="border">
               <span className="visually-hidden">Loading...</span>

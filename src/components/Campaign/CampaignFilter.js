@@ -57,6 +57,7 @@ const CampaignFilter = () => {
                   type="date"
                   placeholder="Start Date"
                   onChange={startDateHandler}
+                  data-testid="start-date"
                 />
               </Form.Group>
             </Col>
@@ -68,6 +69,7 @@ const CampaignFilter = () => {
                   type="date"
                   placeholder="End Date"
                   onChange={endDateHandler}
+                  data-testid="end-date"
                 />
               </Form.Group>
             </Col>
@@ -78,6 +80,7 @@ const CampaignFilter = () => {
                   type="text"
                   placeholder="Search by name"
                   onChange={keywordChangeHandler}
+                  data-testid="keyword"
                 />
               </Form.Group>
             </Col>
