@@ -1,0 +1,10 @@
+.customRow {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.mt20 {
+  margin-top: 2rem;
+}
